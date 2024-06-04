@@ -5,12 +5,13 @@
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/logo_text_view"
@@ -26,9 +27,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Login"
-            android:textColor="@color/white"
             android:textSize="20sp"
-
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/logo_text_view" />
@@ -54,12 +54,12 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password_edit_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginHorizontal="64dp"
             android:layout_marginVertical="32dp"
             android:hint="Senha"
-            android:layout_marginHorizontal="64dp"
             android:inputType="textPassword"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
@@ -72,16 +72,38 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/login_button"
+        <TextView
+            android:id="@+id/TvEsqueci_senha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="32dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/esqueci_senha"
+
+            app:layout_constraintStart_toStartOf="@+id/login_button"
+            app:layout_constraintTop_toBottomOf="@id/login_button" />
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
             android:text="Entrar"
             android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/password_edit_text"
+            app:layout_constraintStart_toStartOf="@+id/password_edit_text"
             app:layout_constraintTop_toBottomOf="@+id/password_edit_text" />
+
+        <TextView
+            android:id="@+id/tvCadastrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/cadastrar"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/login_button"
+            app:layout_constraintTop_toBottomOf="@+id/login_button" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

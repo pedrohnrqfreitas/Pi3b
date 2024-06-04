@@ -1,4 +1,4 @@
-package com.example.pi.ui.notifications;
+package com.example.pi.ui.cartoes;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.pi.databinding.FragmentNotificationsBinding;
+import com.example.pi.databinding.FragmentCartoesBinding;
 
-public class NotificationsFragment extends Fragment {
+public class CartoesFragment extends Fragment {
 
-    private FragmentNotificationsBinding binding;
+    private FragmentCartoesBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        NotificationsViewModel notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
+        CartoesViewModel dashboardViewModel =
+                new ViewModelProvider(this).get(CartoesViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentCartoesBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textDashboard;
+        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

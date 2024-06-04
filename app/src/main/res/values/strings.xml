@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Pi</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_inicio">Início</string>
+    <string name="title_cartoes">Cartões</string>
+    <string name="title_perfil">Perfil</string>
+    <string name="esqueci_senha"><u>Esqueci minha senha</u></string>
+    <string name="cadastrar"><b><u>Cadastrar</u></b></string>
 </resources>

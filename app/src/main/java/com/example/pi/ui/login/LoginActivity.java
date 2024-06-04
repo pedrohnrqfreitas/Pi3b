@@ -1,13 +1,16 @@
 package com.example.pi.ui.login;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.view.WindowManager;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.pi.R;
+
+import com.example.pi.MainActivity;
 import com.example.pi.databinding.FragmetLoginBinding;
 
 
@@ -22,5 +25,28 @@ public class LoginActivity extends AppCompatActivity {
         binding = FragmetLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        binding.tvCadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.TvEsqueciSenha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, EsqueciSenhaActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

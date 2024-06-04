@@ -7,19 +7,16 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.pi.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:name="com.example.pi.ui.inicio.InicioFragment"
+        tools:layout="@layout/fragment_inicio" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.pi.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:name="com.example.pi.ui.cartoes.CartoesFragment"
+        tools:layout="@layout/fragment_cartoes" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.pi.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:name="com.example.pi.ui.perfil.PerfilFragment"
+        tools:layout="@layout/fragment_perfil" />
 </navigation>

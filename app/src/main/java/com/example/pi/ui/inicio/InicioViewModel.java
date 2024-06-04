@@ -1,16 +1,15 @@
-package com.example.pi.ui.dashboard;
+package com.example.pi.ui.inicio;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class DashboardViewModel extends ViewModel {
+public class InicioViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public DashboardViewModel() {
+    public InicioViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
     }
 
     public LiveData<String> getText() {
